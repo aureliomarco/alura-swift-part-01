@@ -53,6 +53,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="felicidadeTextField" destination="HzX-PR-RTq" id="6C3-fx-MeI"/>
+                        <outlet property="nomeTextField" destination="kEJ-34-jhE" id="b2A-TC-grm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
