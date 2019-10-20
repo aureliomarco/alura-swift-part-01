@@ -1,27 +1,31 @@
 import UIKit
 
-let totalDeCalorias = [50.5, 100]
+// Criar primeira refeição
 
-// método com parametro Array de Double explicito
-func todasCalorias(totalDeCalorias: Array<Double>) {
-    var total = 0.0
-    
-    for caloria in totalDeCalorias {
-        total += caloria
-    }
+let nome: String = "Macarrão"
+let felicidade: String = "5"
+
+// Criar segunda refeição
+
+let nome2: String = "Churros"
+let felicidade2: String = "4"
+
+
+// ---------------------------
+
+// Criar uma classe que agrupe essas características:
+
+class Refeicao {
+    let nome: String = "Macarrão"
+    let felicidade: String = "5"
 }
 
-// método com parametro Array de Double implicito
-func todasCalorias2(totalDeCalorias: [Double]) -> Double {
-    var total = 0.0
-    
-    for caloria in totalDeCalorias {
-        total += caloria
-    }
-    
-    return total
-}
+// Instanciando uma classe:
 
-let total = todasCalorias2(totalDeCalorias: [50.5, 100, 400])
-print(total)
+// Explicito
+let refeicao: Refeicao = Refeicao()
 
+// Implicito
+let refeicao2 = Refeicao()
+
+print(refeicao.nome)
