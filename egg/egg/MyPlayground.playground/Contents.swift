@@ -1,35 +1,34 @@
 import UIKit
 
-// Comentário de uma única linha
+let caloria1 = 50.5
+let caloria2 = 100
+let caloria3 = 300
+let caloria4 = 500
 
-/*
-    mvpmvpmvpmvpmvpmvpmvpmvpmvp
-    mvpmvpmvpmvpmvpmvpmvpmvpmvp
-    mvpmvpmvpmvpmvpmvpmvpmvpmvp
- */
+// Declaração de Array
+let totalDeCalorias = [50.5, 100, 300, 500, 450, 700]
+print(totalDeCalorias)
 
-let nome: String = "churros"
-let felicidade: Int = 5
-let calorias: Double = 79.5
-let vegetal: Bool = true
+// Primeira forma de escrever um for:
+print("\nFirst Form: \n")
 
-// Método Simples
-func alimentoConsumido() {
-    print("O alimento consumido foi: \(nome)")
+for i in 0...3 {
+    print(i)
+    print(totalDeCalorias[i])
 }
 
-alimentoConsumido()
+// Segunda forma de escrever um for:
+print("\nSecond Form: \n")
 
-// Método com parâmetros
-func alimentoConsumido2(nome: String, caloria: Double) {
-    print("O alimento consumido foi: \(nome), com calorias: \(caloria)")
+for i in 0...totalDeCalorias.count - 1 {
+    print(i)
+    print(totalDeCalorias[i])
 }
 
-alimentoConsumido2(nome: nome, caloria: calorias)
+// Terceira forma de escrever um for:
+// for in
+print("\nThird Form: \n")
 
-// Método com ocultação de parâmetros
-func alimentoConsumido2(_ nome: String, _ caloria: Double) {
-    print("O alimento consumido foi: \(nome), com calorias: \(caloria) - com ocultação")
+for caloria in totalDeCalorias {
+    print(caloria)
 }
-
-alimentoConsumido2(nome, calorias)
