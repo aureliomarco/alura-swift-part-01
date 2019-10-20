@@ -1,34 +1,27 @@
 import UIKit
 
-let caloria1 = 50.5
-let caloria2 = 100
-let caloria3 = 300
-let caloria4 = 500
+let totalDeCalorias = [50.5, 100]
 
-// Declaração de Array
-let totalDeCalorias = [50.5, 100, 300, 500, 450, 700]
-print(totalDeCalorias)
-
-// Primeira forma de escrever um for:
-print("\nFirst Form: \n")
-
-for i in 0...3 {
-    print(i)
-    print(totalDeCalorias[i])
+// método com parametro Array de Double explicito
+func todasCalorias(totalDeCalorias: Array<Double>) {
+    var total = 0.0
+    
+    for caloria in totalDeCalorias {
+        total += caloria
+    }
 }
 
-// Segunda forma de escrever um for:
-print("\nSecond Form: \n")
-
-for i in 0...totalDeCalorias.count - 1 {
-    print(i)
-    print(totalDeCalorias[i])
+// método com parametro Array de Double implicito
+func todasCalorias2(totalDeCalorias: [Double]) -> Double {
+    var total = 0.0
+    
+    for caloria in totalDeCalorias {
+        total += caloria
+    }
+    
+    return total
 }
 
-// Terceira forma de escrever um for:
-// for in
-print("\nThird Form: \n")
+let total = todasCalorias2(totalDeCalorias: [50.5, 100, 400])
+print(total)
 
-for caloria in totalDeCalorias {
-    print(caloria)
-}
