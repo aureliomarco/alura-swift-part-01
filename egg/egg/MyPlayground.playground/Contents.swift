@@ -37,4 +37,13 @@ func exibeNomeRefeicao() {
 }
 
 exibeNomeRefeicao()
-//
+
+// Na conversão de string para Int o Swift transforma num tipo Optional a váriavel
+// no print sai Optional(5) e é necessário tratar
+let numero = Int("5")
+print(numero)
+if let n = numero {
+    print(n)
+} else {
+    print("Erro ao converter string para int")
+}
