@@ -1,17 +1,5 @@
 import UIKit
 
-// Criar primeira refeição
-let nome: String = "Macarrão"
-let felicidade: String = "5"
-
-// Criar segunda refeição
-let nome2: String = "Churros"
-let felicidade2: String = "4"
-
-// ---------------------------
-
-// Criar uma classe que agrupe essas características:
-// Optionals para declarar propriedades sem valores
 class Refeicao {
     var nome: String?
     var felicidade: String?
@@ -22,6 +10,31 @@ let refeicao = Refeicao()
 refeicao.nome = "Macarrão"
 
 // CUIDADO => Forced Unwrap
-print(refeicao.nome!)
+if refeicao.nome != nil {
+    print("\nPrint Forced Unwrap: ")
+    print(refeicao.nome!)
+}
 
+// Boas práticas para extrair valores opcionais:
 
+// if let, cria uma constante para verificar se existe valor em uma variável opcional
+if let nome = refeicao.nome {
+    print("\nPrint IF LET: ")
+    print(nome)
+}
+ 
+// guard let
+// guard let, cria uma constante se o valor do opcional for inválido executa o return
+
+func exibeNomeRefeicao() {
+    if let nome = refeicao.nome {
+        print(nome)
+    }
+    
+    guard let nome = refeicao.nome else {
+        return
+    }
+}
+
+exibeNomeRefeicao()
+//
